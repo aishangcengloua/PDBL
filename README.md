@@ -1,17 +1,19 @@
 # [PDBL: Improving Histopathological Tissue Classification with Plug-and-Play Pyramidal Deep-Broad Learning](https://ieeexplore.ieee.org/document/9740140)
 
+## Introduction
+
 In this paper, the authors propose a framework called PDBL for classification tasks.
 
 ![outline](https://github.com/linjiatai/PDBL/raw/main/PDBL.png)
 
-In the paper, four models were trained on different data sets and the performance was compared. Four models are **Baseline+FC***, **Baseline+PDBL**, **Baseline***, **Baseline*+PDBL** :
+In the paper, four models were trained on different data sets and the performance was compared. Four models are **Baseline+FC***, **Baseline+PDBL**, **Baseline***, **Baseline*****+** **PDBL** :
 
 - `Baseline+FC*` : Frozethe baseline models pre-trained on ImageNet and only update the fully connected layers (FC). But The epochs for training FC are not mentioned in the paper. Therefore, I train FC for 50 epochs.
 - `Baseline+PDBL`  : PDBL directly plugged on the baseline models pre-trained by ImageNet.
 - `Baseline*` : baseline models pre-trained by ImageNet fine-tuned for 50 epochs without PDBL.
 - `Baseline*+PDBL`  : Baseline models pre-trained by ImageNet fine-tuned for 50 epochs with PDBL
 
-### Structure
+## Structure
 
 ```python
 ../PDBL
@@ -49,7 +51,7 @@ The role of each file or folder is as follows:
 - `pdbl.py` : build pdbl which is used to assist the above three models to classify.
 - `trainer.py` : train and test all models.
 
-### Requirements
+## Requirements
 
 - numpy==1.20.1
 - opencv_contrib_python==4.5.4.60
@@ -58,9 +60,15 @@ The role of each file or folder is as follows:
 - torchvision==0.13.0
 - tqdm==4.59.0
 
-### Usage
+## Usage
 
-#### Installation
+### Installation
+
+- Download the repository.
+
+```python
+git clone https://github.com/aishangcengloua/PDBL.git
+```
 
 - Install python dependencies.
 
@@ -68,7 +76,7 @@ The role of each file or folder is as follows:
 pip install -r requirements.txt
 ```
 
-#### Training and Inference
+### Training and Inference
 
 I provide an example to create and train a PDBL on 1% KMI set without CNN re-training burden. To use this example code, you must download the data set, you must download the 1% KMI set and KME set ([Baidu Netdisk](https://pan.baidu.com/s/1gLRDYK2lmgoLlZuzLcNIfw?pwd=wfzk) with code **wfzk**) and unpacked them in **dataset** folder. And you can train and test the PDBL by the command:
 
@@ -80,6 +88,6 @@ In the command, `train_model` is used to decide whether to train the classificat
 
 Moreover, the original Kather Dataset and LC25000 Dataset can be download at the links [Kather2019](https://zenodo.org/record/1214456) and [LC25000](https://github.com/tampapath/lung_colon_image_set).
 
-### Reference
+## Reference
 
 - [**https://github.com/linjiatai/PDBL**](https://github.com/linjiatai/PDBL)
