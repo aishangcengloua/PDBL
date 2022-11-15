@@ -1,4 +1,4 @@
-<center><font size=5><strong><a href="https://ieeexplore.ieee.org/document/9740140">PDBL: Improving Histopathological Tissue Classification with Plug-and-Play Pyramidal Deep-Broad Learning</strong></a></font></center>
+<center><font size=10><strong><a href="https://ieeexplore.ieee.org/document/9740140">PDBL: Improving Histopathological Tissue Classification with Plug-and-Play Pyramidal Deep-Broad Learning</strong></a></font></center>
 
 In this paper, the authors propose a framework called PDBL for classification tasks.
 
@@ -61,6 +61,12 @@ The role of each file or folder is as follows:
 ### Usage
 
 #### Installation
+
+- Download the repository.
+
+```python
+git clone https://github.com/aishangcengloua/PDBL
+```
 
 - Install python dependencies.
 
