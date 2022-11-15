@@ -6,7 +6,7 @@ In this paper, the authors propose a framework called PDBL for classification ta
 
 ![outline](https://github.com/linjiatai/PDBL/raw/main/PDBL.png)
 
-In the paper, four models were trained on different data sets and the performance was compared. Four models are **Baseline+FC***, **Baseline+PDBL**, **Baseline***, **Baseline*****+** **PDBL** :
+In the paper, four models were trained on different data sets and the performance was compared. Four models are **Baseline+FC***, **Baseline+PDBL**, **Baseline***, **Baseline *+PDBL** :
 
 - `Baseline+FC*` : Frozethe baseline models pre-trained on ImageNet and only update the fully connected layers (FC). But The epochs for training FC are not mentioned in the paper. Therefore, I train FC for 50 epochs.
 - `Baseline+PDBL`  : PDBL directly plugged on the baseline models pre-trained by ImageNet.
